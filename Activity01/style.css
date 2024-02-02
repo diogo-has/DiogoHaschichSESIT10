@@ -1,0 +1,40 @@
+body{
+    padding: 20px;
+    overflow-x: hidden;
+    background-color: azure;
+ }
+
+ .principal{
+     width:97% ;
+     height:auto;
+     padding: 20px;
+     text-align: center;
+ }
+ 
+ .font-style{
+     border-bottom: 2px solid lightgray;
+     font-size: 3rem;
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     padding-bottom: 15px;
+ }
+ .font-style02{
+     font-size: 1.8rem;
+     color:darkgrey
+ }
+ 
+ .div-calculos{
+     padding: 10px;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-evenly;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+
+ .operacao {
+    background-color:aliceblue;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 4px;
+ }
