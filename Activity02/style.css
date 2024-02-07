@@ -1,28 +1,89 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 header {
-    background-color: aqua;
+    position: fixed;
+    top: 0;
+    background-color: midnightblue;
     width: 100%;
-    height: 50px;
-    display: flexbox;
-    line-height: 50px;
+    height: 45px;
+    line-height: 45px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    list-style-type: none;
+    list-style: none;
+    font-weight: 600;
 }
 
 a {
     text-decoration: none;
+    color: gainsboro;
+    font-size: 1.3rem;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+.perfil01 {
+    padding-top: 45px;
+    width: 100%;
+    height: 600px;
+    background-color: slategray;
+}
+
+.perfil02 {
+    padding-top: 45px;
+    width: 100%;
+    height: 600px;
+    background-color: dimgray;
+}
+
+.tecno {
+    padding-top: 45px;
+    width: 100%;
+    height: 600px;
+    background-color: slategray;
+}
+
+.contact {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    width: 100%;
+    height: auto;
+    background-color: dimgray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.leftContact {
+    background-color: red;
+    width: 600px;
+    height: 500px;
+}
+
+.rightContact {
+    background-color: blue;
+    width: 600px;
+    height: 500px;
 }
