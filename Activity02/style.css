@@ -20,6 +20,7 @@ header {
     height: 45px;
     line-height: 45px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 999;
 }
 
 ul {
@@ -46,6 +47,12 @@ a:hover {
     width: 100%;
     height: 600px;
     background-color: slategray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .perfil02 {
@@ -86,4 +93,24 @@ a:hover {
     background-color: blue;
     width: 600px;
     height: 500px;
+}
+
+.rel {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: rebeccapurple;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+img {
+    position: absolute;
+    transition: all 200ms ease;
+}
+
+img:hover {
+    transform: scale(1.2);
+    transition: all 400ms ease;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
