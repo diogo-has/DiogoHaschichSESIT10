@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
+
 <body>
     <header>
         <ul>
@@ -44,7 +47,32 @@
         </div>
     </div>
     <div id="tecno" class="tecno">
-        <h1>techno</h1>
+        <div class="linguagens">
+            <div class="linguagem">
+                <div class="logo">
+                    <img src="htmlLogo.png" alt="" width="" height="150">
+                </div>
+                <div class="texto">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, deserunt.</p>
+                </div>
+            </div>
+            <div class="linguagem">
+                <div class="logo">
+                    <img src="cssLogo.png" alt="" width="" height="150">
+                </div>
+                <div class="texto">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, deserunt.</p>
+                </div>
+            </div>
+            <div class="linguagem">
+                <div class="logo">
+                    <img src="javaLogo.png" alt="" width="" height="150">
+                </div>
+                <div class="texto">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, deserunt.</p>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="contact" class="contact">
         <div class="leftContact">
@@ -55,13 +83,19 @@
                 <input type="text" placeholder="Seu Nome" id="nome">
                 <input type="text" placeholder="Número de Contato">
                 <input type="text" placeholder="Endereço de e-Mail">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
-                <button class="submit">Enviar</button>
+                <textarea name="" id="mensagem" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
+                <button class="submit" onclick="confZap()">Enviar</button>
             </div>
         </div>
         <div class="rightContact">
-            <p>a direita</p>
+            <div>
+                <p>Nome: <span id="confNome"></span></p>
+                <p>Mensagem: <span id="confMsg"></span></p>
+            </div>
+            <button class="submit" onclick="enviar()">zap</button>
+
         </div>
     </div>
 </body>
+
 </html>
