@@ -26,7 +26,7 @@
     <div id="perfil01" class="perfil01">
         <div class="">
             <div class="rel">
-                <img src="image.jpg" alt="" width="400" height="400">
+                <img class="fotoPerfil" src="image.jpg" alt="" width="400" height="400">
             </div>
         </div>
         <div class="">
@@ -38,7 +38,7 @@
     <div id="perfil02" class="perfil02">
         <div class="">
             <div class="rel">
-                <img src="image2.jpg" alt="" width="400" height="400">
+                <img class="fotoPerfil" src="image2.jpg" alt="" width="400" height="400">
             </div>
         </div>
         <div class="">
@@ -53,7 +53,9 @@
                     <img src="htmlLogo.png" alt="" width="" height="150">
                 </div>
                 <div class="texto">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, deserunt.</p>
+                    <h2>HTML</h2>
+                    <br>
+                    <p>Criada pelo britânico Tim Berners-Lee, o acrônimo HTML significa HiperText Markup Language, traduzindo ao português: Linguagem de Marcação de Hipertexto.  O HTML é o componente básico da web, ele permite inserir o conteúdo e estabelecer a estrutura básica de um website. Portanto, ele serve para dar significado e organizar as informações de uma página na web. Sem isso, o navegador não saberia exibir textos como elementos ou carregar imagens e outros conteúdos.</p>
                 </div>
             </div>
             <div class="linguagem">
@@ -61,7 +63,9 @@
                     <img src="cssLogo.png" alt="" width="" height="150">
                 </div>
                 <div class="texto">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, deserunt.</p>
+                    <h2>CSS</h2>
+                    <br>
+                    <p>O CSS é uma linguagem de folhas de estilos que é utilizada para definir como os documentos escritos na linguagem de marcação (HTML ou XML) devem ser apresentados em termos de formatação, de layout. Em um cenário ideal, enquanto o HTML é usado para estruturar os conteúdos, o CSS é utilizado para formatá-los. Dessa forma há uma enorme integração entre o HTML e o CSS.</p>
                 </div>
             </div>
             <div class="linguagem">
@@ -69,7 +73,9 @@
                     <img src="javaLogo.png" alt="" width="" height="150">
                 </div>
                 <div class="texto">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, deserunt.</p>
+                    <h2>JavaScript</h2>
+                    <br>
+                    <p>O JavaScript é uma linguagem de programação de alto nível voltada para o desenvolvimento web, criada originalmente para funcionar do lado do usuário, ou seja, nos navegadores. Junto do HTML e do CSS, é uma das principais tecnologias da web, permitindo a criação de páginas interativas com elementos dinâmicos e boa performance. </p>
                 </div>
             </div>
         </div>
@@ -88,11 +94,14 @@
             </div>
         </div>
         <div class="rightContact">
-            <div>
-                <p>Nome: <span id="confNome"></span></p>
-                <p>Mensagem: <span id="confMsg"></span></p>
+            <div class="zapHeader"></div>
+            <div class="zapMsg">
+                <span class="zapTxt">Sua Mensagem</span>
             </div>
-            <button class="submit" onclick="enviar()">zap</button>
+            <div class="zapBottom"> 
+                <button class="zapSend" onclick="enviar()">Iniciar Conversa</button>
+            </div>
+            
 
         </div>
     </div>
