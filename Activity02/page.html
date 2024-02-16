@@ -17,33 +17,33 @@
 <body>
     <header>
         <ul>
-            <li><a href="#perfil01">Perfil 01</a></li>
-            <li><a href="#perfil02">Perfil 02</a></li>
+            <li><a href="#perfil01">Diogo</a></li>
+            <li><a href="#perfil02">Leonardo</a></li>
             <li><a href="#tecno">Tecnologias</a></li>
             <li><a href="#contact">Contato</a></li>
         </ul>
     </header>
     <div id="perfil01" class="perfil01">
-        <div class="">
+        <div class="circulo">
             <div class="rel">
-                <img class="fotoPerfil" src="image.jpg" alt="" width="400" height="400">
+                <img class="fotoPerfil" src="fotoDiogo.jpg" alt="" width="400" height="400">
             </div>
         </div>
-        <div class="">
+        <div class="perfilTxt">
             <h1>Diogo Haschich</h1>
-            <p>jaungoféia</p>
+            <p>Aluno de Desenvolvimento de Sistemas do SESI da Indústria</p>
         </div>
 
     </div>
     <div id="perfil02" class="perfil02">
-        <div class="">
+        <div class="circulo">
             <div class="rel">
-                <img class="fotoPerfil" src="image2.jpg" alt="" width="400" height="400">
+                <img class="fotoPerfil" src="fotoLeonardo.jpg" alt="" width="400" height="400">
             </div>
         </div>
-        <div class="">
-            <h1>Leonardo Jingolomeios</h1>
-            <p>jaungoféia</p>
+        <div class="perfilTxt">
+            <h1 style="text-align: right;">Leonardo Siqueira</h1>
+            <p style="text-align: right;">Aluno de Desenvolvimento de Sistemas do SESI da Indústria</p>
         </div>
     </div>
     <div id="tecno" class="tecno">
@@ -55,7 +55,11 @@
                 <div class="texto">
                     <h2>HTML</h2>
                     <br>
-                    <p>Criada pelo britânico Tim Berners-Lee, o acrônimo HTML significa HiperText Markup Language, traduzindo ao português: Linguagem de Marcação de Hipertexto.  O HTML é o componente básico da web, ele permite inserir o conteúdo e estabelecer a estrutura básica de um website. Portanto, ele serve para dar significado e organizar as informações de uma página na web. Sem isso, o navegador não saberia exibir textos como elementos ou carregar imagens e outros conteúdos.</p>
+                    <p>Criada pelo britânico Tim Berners-Lee, o acrônimo HTML significa HiperText Markup Language,
+                        traduzindo ao português: Linguagem de Marcação de Hipertexto. O HTML é o componente básico da
+                        web, ele permite inserir o conteúdo e estabelecer a estrutura básica de um website. Portanto,
+                        ele serve para dar significado e organizar as informações de uma página na web. Sem isso, o
+                        navegador não saberia exibir textos como elementos ou carregar imagens e outros conteúdos.</p>
                 </div>
             </div>
             <div class="linguagem">
@@ -65,7 +69,10 @@
                 <div class="texto">
                     <h2>CSS</h2>
                     <br>
-                    <p>O CSS é uma linguagem de folhas de estilos que é utilizada para definir como os documentos escritos na linguagem de marcação (HTML ou XML) devem ser apresentados em termos de formatação, de layout. Em um cenário ideal, enquanto o HTML é usado para estruturar os conteúdos, o CSS é utilizado para formatá-los. Dessa forma há uma enorme integração entre o HTML e o CSS.</p>
+                    <p>O CSS é uma linguagem de folhas de estilos que é utilizada para definir como os documentos
+                        escritos na linguagem de marcação (HTML ou XML) devem ser apresentados em termos de formatação,
+                        de layout. Em um cenário ideal, enquanto o HTML é usado para estruturar os conteúdos, o CSS é
+                        utilizado para formatá-los. Dessa forma há uma enorme integração entre o HTML e o CSS.</p>
                 </div>
             </div>
             <div class="linguagem">
@@ -75,7 +82,10 @@
                 <div class="texto">
                     <h2>JavaScript</h2>
                     <br>
-                    <p>O JavaScript é uma linguagem de programação de alto nível voltada para o desenvolvimento web, criada originalmente para funcionar do lado do usuário, ou seja, nos navegadores. Junto do HTML e do CSS, é uma das principais tecnologias da web, permitindo a criação de páginas interativas com elementos dinâmicos e boa performance. </p>
+                    <p>O JavaScript é uma linguagem de programação de alto nível voltada para o desenvolvimento web,
+                        criada originalmente para funcionar do lado do usuário, ou seja, nos navegadores. Junto do HTML
+                        e do CSS, é uma das principais tecnologias da web, permitindo a criação de páginas interativas
+                        com elementos dinâmicos e boa performance. </p>
                 </div>
             </div>
         </div>
@@ -87,21 +97,22 @@
             <br>
             <div class="forms">
                 <input type="text" placeholder="Seu Nome" id="nome">
-                <input type="text" placeholder="Número de Contato">
-                <input type="text" placeholder="Endereço de e-Mail">
-                <textarea name="" id="mensagem" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
+                <input type="text" placeholder="Endereço de e-Mail" id="email">
+                <textarea id="mensagem" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
                 <button class="submit" onclick="confZap()">Enviar</button>
             </div>
         </div>
         <div class="rightContact">
-            <div class="zapHeader"></div>
-            <div class="zapMsg">
-                <span class="zapTxt">Sua Mensagem</span>
+            <div class="zapHeader">
+                <img class="zapLogo" src="zapLogo.png" alt="" height="45">
             </div>
-            <div class="zapBottom"> 
+            <div class="zapMsg">
+                <span class="zapTxt" id="zapTxt">Sua Mensagem</span>
+            </div>
+            <div class="zapBottom">
                 <button class="zapSend" onclick="enviar()">Iniciar Conversa</button>
             </div>
-            
+
 
         </div>
     </div>

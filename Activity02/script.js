@@ -1,26 +1,22 @@
-var nomeGlobal;
 var mensagemGlobal;
 
 function confZap() {
     var nome = document.getElementById("nome").value
+    var email = document.getElementById("email").value
     var mensagem = document.getElementById("mensagem").value
 
-    console.log(nome);
-    console.log(mensagem);
-
-    document.getElementById("confNome").textContent = nome;
-    document.getElementById("confMsg").textContent = mensagem;
-
-    nomeGlobal = nome;
-    mensagemGlobal = mensagem;
+    mensagemGlobal = `Nome: ${nome}\n\nEndereço de Email: ${email}\n\n${mensagem}`;
+    
+    document.getElementById("zapTxt").textContent = mensagemGlobal;
 }
 
 function enviar() {
     var tel = "5541998297963";
 
     var linkZap = "https://wa.me/" +
-    tel + "?text=Nome: " + nomeGlobal +
-    " - " + mensagemGlobal;
+        tel +
+        "?text= " +
+        window.encodeURIComponent(mensagemGlobal);
 
     window.open(linkZap, "_blank");
 }
