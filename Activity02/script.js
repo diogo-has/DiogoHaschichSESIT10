@@ -11,7 +11,7 @@ function confZap() {
 }
 
 function enviar() {
-    var tel = "5541998297963";
+    var tel = "5541999999999";
 
     var linkZap = "https://wa.me/" +
         tel +
