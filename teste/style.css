@@ -1,0 +1,9 @@
+.provaDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.questID {
+    margin-top:0;
+    color:#777;
+}

@@ -1,6 +1,6 @@
 var questaoAtual = 0;
 
-fetch("json.json")
+/* fetch("json.json")
   .then(result => result.json())
   .then(result => result.content.questions[questaoAtual])
   .then(questao => {
@@ -9,17 +9,77 @@ fetch("json.json")
     
     var altern = document.getElementById("altern");
     questao.options.forEach(option => {
+      var optdiv = document.createElement('div');
+      optdiv.className = 'optdiv'
+
       var opt = document.createElement('input');
       opt.type = "radio";
       opt.name = questao.id;
       opt.id = option.id;
 
       var optlbl = document.createElement('label');
-      optlbl.for = option.id;
+      optlbl.htmlFor = option.id;
       optlbl.textContent = option.content;
 
-
-      altern.appendChild(opt);
-      altern.appendChild(optlbl);
+      altern.appendChild(optdiv);
+      optdiv.appendChild(opt);
+      optdiv.appendChild(optlbl);
     });
-  })
+  }) */
+
+fetch('json.json')
+  .then(result => result.json())
+  .then(result => result.content)
+  .then(prova => {
+    var provaDiv = document.getElementById('provaDiv');
+    var title = document.createElement('h1');
+    title.textContent = prova.name;
+
+    provaDiv.appendChild(title);
+
+    var questIndex = 1;
+    prova.questions.forEach(question => {
+      var questDiv = document.createElement('div');
+      questDiv.className = 'questDiv';
+      var optsDiv = document.createElement('div');
+      questDiv.className = 'optsDiv';
+
+      var questNum = document.createElement('h2');
+      questNum.className = 'questNum';
+      questNum.textContent = 'Questão ' + questIndex;
+
+      var questID = document.createElement('p');
+      questID.className = 'questID';
+      questID.textContent = "#" + question.id;
+
+      var questTitle = document.createElement('span');
+      questTitle.className = 'questTitle';
+      questTitle.innerHTML = question.body;
+
+      provaDiv.appendChild(questDiv);
+      questDiv.appendChild(questNum);
+      questNum.appendChild(questID);
+      questDiv.appendChild(questTitle);
+      questDiv.appendChild(optsDiv);
+
+      questIndex++;
+
+      question.options.forEach(option => {
+        var optdiv = document.createElement('div');
+        optdiv.className = 'optdiv'
+
+        var opt = document.createElement('input');
+        opt.type = "radio";
+        opt.name = questao.id;
+        opt.id = option.id;
+
+        var optlbl = document.createElement('label');
+        optlbl.htmlFor = option.id;
+        optlbl.textContent = option.content;
+
+        altern.appendChild(optdiv);
+        optdiv.appendChild(opt);
+        optdiv.appendChild(optlbl);
+      })
+    });
+  });
