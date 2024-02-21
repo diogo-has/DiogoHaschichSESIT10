@@ -1,19 +1,13 @@
 
 function muda_cardapio(n) {
-    document.querySelectorAll('cardapios').forEach(cardapio => {
+    var cardapios = document.querySelectorAll('.cardapio') 
+    cardapios.forEach(cardapio => {
         cardapio.classList.add('hidden');
+        console.log(cardapio);
     });
 
-    console.log(n);
+    console.log(cardapios);
+    console.log(cardapios[n])
+    cardapios[n].classList.remove('hidden');
     
-    switch (n) {
-        case 0:
-            document.querySelector('#pratos').classList.remove('hidden');
-            break;
-        case 1:
-            document.querySelector('#sobremesa').classList.remove('hidden');
-            break;
-        default:
-            break;
-    }
 }

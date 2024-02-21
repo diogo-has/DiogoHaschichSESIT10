@@ -42,7 +42,7 @@ fetch('json.json')
       var questDiv = document.createElement('div');
       questDiv.className = 'questDiv';
       var optsDiv = document.createElement('div');
-      questDiv.className = 'optsDiv';
+      optsDiv.className = 'optsDiv';
 
       var questNum = document.createElement('h2');
       questNum.className = 'questNum';
@@ -65,21 +65,23 @@ fetch('json.json')
       questIndex++;
 
       question.options.forEach(option => {
-        var optdiv = document.createElement('div');
-        optdiv.className = 'optdiv'
+        var optDiv = document.createElement('div');
+        optDiv.className = 'optDiv'
 
-        var opt = document.createElement('input');
-        opt.type = "radio";
-        opt.name = questao.id;
-        opt.id = option.id;
+        var optInput = document.createElement('input');
+        optInput.className = 'optInput';
+        optInput.type = "radio";
+        optInput.name = question.id;
+        optInput.id = question.id+"_radiogroup_"+option.id;
 
-        var optlbl = document.createElement('label');
-        optlbl.htmlFor = option.id;
-        optlbl.textContent = option.content;
+        var optLbl = document.createElement('label');
+        optLbl.className = 'optLbl';
+        optLbl.htmlFor = question.id+"_radiogroup_"+option.id;
+        optLbl.textContent = option.content;
 
-        altern.appendChild(optdiv);
-        optdiv.appendChild(opt);
-        optdiv.appendChild(optlbl);
+        optsDiv.appendChild(optDiv);
+        optDiv.appendChild(optInput);
+        optDiv.appendChild(optLbl);
       })
     });
   });
