@@ -1,32 +1,3 @@
-var questaoAtual = 0;
-
-/* fetch("json.json")
-  .then(result => result.json())
-  .then(result => result.content.questions[questaoAtual])
-  .then(questao => {
-    document.getElementById("num").textContent = questao.id;
-    document.getElementById("title").innerHTML = questao.body;
-    
-    var altern = document.getElementById("altern");
-    questao.options.forEach(option => {
-      var optdiv = document.createElement('div');
-      optdiv.className = 'optdiv'
-
-      var opt = document.createElement('input');
-      opt.type = "radio";
-      opt.name = questao.id;
-      opt.id = option.id;
-
-      var optlbl = document.createElement('label');
-      optlbl.htmlFor = option.id;
-      optlbl.textContent = option.content;
-
-      altern.appendChild(optdiv);
-      optdiv.appendChild(opt);
-      optdiv.appendChild(optlbl);
-    });
-  }) */
-
 fetch('json.json')
   .then(result => result.json())
   .then(result => result.content)
@@ -68,20 +39,56 @@ fetch('json.json')
         var optDiv = document.createElement('div');
         optDiv.className = 'optDiv'
 
+        var optLbl = document.createElement('label');
+        optLbl.className = 'optLbl';
+        optLbl.htmlFor = question.id+"_radiogroup_"+option.id;
+
+        var lblDiv = document.createElement('div')
+        lblDiv.className = 'lblDiv';
+
         var optInput = document.createElement('input');
         optInput.className = 'optInput';
         optInput.type = "radio";
         optInput.name = question.id;
         optInput.id = question.id+"_radiogroup_"+option.id;
 
-        var optLbl = document.createElement('label');
-        optLbl.className = 'optLbl';
-        optLbl.htmlFor = question.id+"_radiogroup_"+option.id;
-        optLbl.textContent = option.content;
+        var optText = document.createElement('p');
+        optText.className = 'optText';
+        optText.textContent = option.content;
 
         optsDiv.appendChild(optDiv);
-        optDiv.appendChild(optInput);
         optDiv.appendChild(optLbl);
+        optLbl.appendChild(lblDiv);
+        lblDiv.appendChild(optInput);
+        lblDiv.appendChild(optText);
+        
       })
     });
   });
+
+  /* fetch("json.json")
+  .then(result => result.json())
+  .then(result => result.content.questions[questaoAtual])
+  .then(questao => {
+    document.getElementById("num").textContent = questao.id;
+    document.getElementById("title").innerHTML = questao.body;
+    
+    var altern = document.getElementById("altern");
+    questao.options.forEach(option => {
+      var optdiv = document.createElement('div');
+      optdiv.className = 'optdiv'
+
+      var opt = document.createElement('input');
+      opt.type = "radio";
+      opt.name = questao.id;
+      opt.id = option.id;
+
+      var optlbl = document.createElement('label');
+      optlbl.htmlFor = option.id;
+      optlbl.textContent = option.content;
+
+      altern.appendChild(optdiv);
+      optdiv.appendChild(opt);
+      optdiv.appendChild(optlbl);
+    });
+  }) */
