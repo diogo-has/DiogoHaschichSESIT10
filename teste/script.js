@@ -4,6 +4,7 @@ fetch('json.json')
   .then(prova => {
     var provaDiv = document.getElementById('provaDiv');
     var title = document.createElement('h1');
+    title.className = 'title'
     title.textContent = prova.name;
 
     provaDiv.appendChild(title);
@@ -12,10 +13,11 @@ fetch('json.json')
     prova.questions.forEach(question => {
       var questDiv = document.createElement('div');
       questDiv.className = 'questDiv';
+
       var optsDiv = document.createElement('div');
       optsDiv.className = 'optsDiv';
 
-      var questNum = document.createElement('h2');
+      var questNum = document.createElement('h3');
       questNum.className = 'questNum';
       questNum.textContent = 'Questão ' + questIndex;
 
