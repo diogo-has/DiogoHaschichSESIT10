@@ -35,7 +35,7 @@
     </div>
     <button type="button" class="btn btn-success" onclick="comecar()">Começar</button>
 
-    <div id="selects-div">
+    <div id="selects-div" class="selects-div">
         <h2>Olá <span id="nomePrint"></span>, vamos começar a escolher sua refeição!</h2>
         <h3>Pratos</h3>
         <select id="selectPrato" class="form-select" aria-label="Default select example">
@@ -56,8 +56,16 @@
             <option selected>Selecione uma sobremesa</option>
             <option value="Bolo">Bolo</option>
             <option value="Torta de Limao">Torta de Limao</option>
-            <option value="Omelete">Omelete</option>
+            <option value="Brownie com Sorvete">Brownie com Sorvete</option>
         </select>
+        <div class="botoes">
+            <button onclick="limpar()" class="btn btn-success" type="button">Fazer Pedido</button>
+            <button onclick="limpar()" class="btn btn-outline-secondary" type="button">Limpar</button>
+        </div>
+        <div>
+            <span class="badge bg-primary">Total: </span>
+            <span class="badge bg-secondary" id="resultado"></span>
+        </div>
     </div>
 
 </body>

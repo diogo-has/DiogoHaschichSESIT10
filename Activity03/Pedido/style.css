@@ -16,6 +16,21 @@ body {
 
 #selects-div {
     display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.badge {
+    font-size: 1.3rem !important;
 }
 
 .error-modal {
