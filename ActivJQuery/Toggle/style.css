@@ -1,0 +1,14 @@
+.light {
+    background-color: white;
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
