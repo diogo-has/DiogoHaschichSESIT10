@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2vh;
+            padding: 1em;
+            width: 100vw;
+            height: auto;
+            overflow-x: hidden;
+            background-image: url('bg.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <img style="filter: drop-shadow(black 1px 1px 10px);" src="logo.png" alt="Logo" width="1000px">
+    <div>
+        <label for="pageInput">Digite uma página de (1/42)</label>
+        <input type="text" name="" id="pageInput">
+        <button onclick="fetchCharacters()">Mostrar Personagens</button>
+    </div>
+
+    <div id="container"></div>
+    <script>
+        async function fetchCharacters() {
+            const page = document.getElementById("pageInput").value || 1;
+            const apiUrl = `https://rickandmortyapi.com/api/character/?page=${page}`
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                console.log(data);
+            } catch (error) {
+                console.error('erro ao buscar personagem - ', error)
+            }
+        }
+    </script>
+</body>
+</html>
