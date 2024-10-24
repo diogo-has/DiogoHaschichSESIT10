@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="restaurante.css">
+</head>
+
+<body>
+    <form action="restaurante.php" method="get" style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin: 20px;
+    ">
+        <div class="selecao">
+            <div class="prato">
+                <h3>Carne</h3>
+                <p>R$ 19,99</p>
+                <input type="checkbox" name="carne">
+            </div>
+            <div class="prato">
+                <h3>Pão</h3>
+                <p>R$ 10,99</p>
+                <input type="checkbox" name="pao">
+            </div>
+            <div class="prato">
+                <h3>Macarrão</h3>
+                <p>R$ 29,99</p>
+                <input type="checkbox" name="macarrao">
+            </div>
+            <div class="prato">
+                <h3>Feijão</h3>
+                <p>R$ 10,03</p>
+                <input type="checkbox" name="feijao">
+            </div>
+        </div>
+        <div class="selecao">
+            <div class="cupom">
+                <h3>0% de Desconto</h3>
+                <input type="radio" name="desc" value="1" checked>
+            </div>
+            <div class="cupom">
+                <h3>10% de Desconto</h3>
+                <input type="radio" name="desc" value="0.9">
+            </div>
+            <div class="cupom">
+                <h3>20% de Desconto</h3>
+                <input type="radio" name="desc" value="0.8">
+            </div>
+            <div class="cupom">
+                <h3>30% de Desconto</h3>
+                <input type="radio" name="desc" value="0.7">
+            </div>
+        </div>
+        <button type="submit">Enviar Pedido</button>
+    </form>
+</body>
+</html>

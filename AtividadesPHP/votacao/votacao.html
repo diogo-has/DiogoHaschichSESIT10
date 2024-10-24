@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="votacao.css">
+</head>
+
+<body>
+    <form action="login.php" method="get" style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 20px;
+    ">
+        <div class="candidatos">
+            <div class="candidato" style="border: 1px solid brown;">
+                <h3>João Marrom</h3>
+                <input type="radio" name="vote" value="JM">
+            </div>
+            <div class="candidato" style="border: 1px solid blue;">
+                <h3>Pedro Azul</h3>
+                <input type="radio" name="vote" value="PA">
+            </div>
+            <div class="candidato" style="border: 1px solid magenta;">
+                <h3>Gabriel Rosa</h3>
+                <input type="radio" name="vote" value="GR">
+            </div>
+            <div class="candidato" style="border: 1px solid green;">
+                <h3>Maria Verde</h3>
+                <input type="radio" name="vote" value="MV">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
